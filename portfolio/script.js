@@ -1,13 +1,18 @@
-// Mobile menu toggle
-function toggleMobileMenu() {
-    const menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("active");
-}
+const buttons = document.querySelectorAll(".nav-btn");
+const sections = document.querySelectorAll(".section");
 
-// Animate skill bars
-document.addEventListener("DOMContentLoaded", () => {
-    const bars = document.querySelectorAll(".skill-progress");
-    bars.forEach(bar => {
-        bar.classList.add("animate");
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const target = btn.dataset.section;
+
+    sections.forEach(sec => {
+      sec.classList.remove("active");
+      if (sec.id === target) {
+        sec.classList.add("active");
+      }
     });
+  });
 });
