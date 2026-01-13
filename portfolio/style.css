@@ -274,3 +274,70 @@ h1 {
     transition: transform 0.1s ease-out; /* smooth movement */
     will-change: transform;
 }
+
+/* PROJECTS SECTION */
+.projects-layout {
+  display: flex;
+  justify-content: center; /* centers the row */
+  gap: 32px; /* space between the cards */
+  margin-top: 60px;
+  flex-wrap: nowrap; /* prevents stacking */
+  overflow-x: auto; /* optional: allows horizontal scroll on small screens */
+  padding-bottom: 20px;
+}
+
+.project-card {
+  background: #0f0f12;
+  border-radius: 22px;
+  padding: 28px;
+  max-width: 560px;
+  box-shadow:
+    inset 0 0 0 1px #1a1a1f,
+    0 20px 60px rgba(0,0,0,0.45);
+  transition: 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.6),
+    inset 0 0 0 1px #2a2a32;
+}
+
+/* subtle highlight so it feels "featured" */
+.project-card.highlight {
+  box-shadow:
+    inset 0 0 0 1px rgba(107, 255, 144, 0.35),
+    0 25px 70px rgba(0,0,0,0.6);
+}
+
+.project-card h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.project-card .tech {
+  font-size: 13px;
+  color: #9b9ba1;
+  margin-bottom: 14px;
+}
+
+.project-card .description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #bdbdc2;
+  margin-bottom: 20px;
+}
+
+.project-actions {
+  display: flex;
+  gap: 14px;
+}
+
+/* reuse mini cards but make them button-like here */
+.project-actions .mini {
+  height: auto;
+  padding: 10px 16px;
+  align-items: center;
+  font-size: 13px;
+}
