@@ -341,3 +341,29 @@ h1 {
   align-items: center;
   font-size: 13px;
 }
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap; /* allows wrapping if screen is small */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-links .mini {
+  width: 120px;      /* fixed width */
+  height: 120px;     /* same as width → perfect square */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;        /* remove extra padding */
+  font-size: 14px;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.social-links .mini:hover {
+  transform: translateY(-8px);
+  background: #1f1f25;
+}
