@@ -382,3 +382,11 @@ h1 {
   background: #1f1f25;
 }
 
+.gradient-text {
+  font-size: 64px; /* adjust size */
+  font-weight: 700;
+  background: linear-gradient(135deg, #6bff90, #ff4fd8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
