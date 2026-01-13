@@ -1,0 +1,74 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #8b5cf6;
+    --gray-600: #4b5563;
+    --gray-100: #f3f4f6;
+}
+
+/* BODY */
+body {
+    font-family: system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    padding-top: 64px;
+    background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+}
+
+/* ABOUT */
+.about {
+    background: var(--gray-100);
+}
+
+/* PROJECTS */
+.project-card {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* CONTACT */
+.contact-item {
+    background: var(--gray-100);
+    border-radius: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
