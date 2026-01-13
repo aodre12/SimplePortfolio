@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Name — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="logo">W</div>
+  <nav>
+    <button class="nav-btn active" data-section="work">Work</button>
+    <button class="nav-btn" data-section="about">About</button>
+    <button class="nav-btn" data-section="play">Play</button>
+  </nav>
+</header>
+
+<main>
+  <!-- WORK -->
+  <section id="work" class="section active">
+    <h1>Your Name</h1>
+    <p class="subtitle">Designing through a different lens.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <span class="tag">UX</span>
+        <img src="assets/work1.png" alt="">
+        <h3>Product Design</h3>
+      </div>
+
+      <div class="card">
+        <span class="tag">AR</span>
+        <img src="assets/work2.png" alt="">
+        <h3>AR Experience</h3>
+      </div>
+
+      <div class="card">
+        <span class="tag">DJ</span>
+        <h3>Creative Coding</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I’m a designer focused on UX, immersive media, and interaction design.
+          Inspired by technology, fashion, and culture.
+        </p>
+      </div>
+
+      <div class="about-cards">
+        <div class="mini-card">🎵 Music</div>
+        <div class="mini-card">🎨 Creative</div>
+        <div class="mini-card">🌊 Flow</div>
+        <div class="mini-card">🚗 Drives</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAY -->
+  <section id="play" class="section">
+    <h2>Playground</h2>
+    <p>Experiments, motion, and side projects.</p>
+
+    <button class="primary-btn">View Experiments</button>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
