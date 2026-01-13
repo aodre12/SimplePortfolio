@@ -119,12 +119,26 @@ body {
 /* HERO SECTION (CENTERED TEXT) */
 #hero {
   display: flex;
-  justify-content: center;
+  flex-direction: column;      /* stack content vertically */
   align-items: center;
-  height: calc(100vh - 88px);
-  text-align: center;
-  flex-direction: column;
+  justify-content: flex-start; /* remove vertical centering */
+  min-height: calc(100vh - 88px);
+  padding-top: 80px;           /* space from top bar */
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow-x: hidden;
 }
+
+#hero .projects-layout {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: nowrap;          /* no stacking */
+  overflow-x: auto;           /* allow horizontal scroll on mobile */
+  width: 100%;
+}
+
 
 #hero h1 {
   font-size: 64px;
@@ -367,3 +381,4 @@ h1 {
   transform: translateY(-8px);
   background: #1f1f25;
 }
+

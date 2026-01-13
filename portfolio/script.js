@@ -1,17 +1,18 @@
-// TAB TOGGLE
 const tabs = document.querySelectorAll(".tab");
 const views = document.querySelectorAll(".view");
 
 tabs.forEach(tab => {
   tab.addEventListener("click", () => {
+    views.forEach(view => view.classList.remove("active"));
     tabs.forEach(t => t.classList.remove("active"));
+
+    const target = document.getElementById(tab.dataset.view);
+    target.classList.add("active");
     tab.classList.add("active");
-    const target = tab.dataset.view;
-    views.forEach(view => {
-      view.classList.toggle("active", view.id === target);
-    });
   });
 });
+
+
 
 // REAL-TIME CLOCK
 function updateTime() {
