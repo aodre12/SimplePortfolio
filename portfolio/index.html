@@ -2,74 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Your Name — Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<header class="nav">
-  <div class="logo">W</div>
-  <nav>
-    <button class="nav-btn active" data-section="work">Work</button>
-    <button class="nav-btn" data-section="about">About</button>
-    <button class="nav-btn" data-section="play">Play</button>
-  </nav>
+<header class="topbar">
+  <div class="topbar-left">
+    <div class="brand">á</div>
+  </div>
+
+  <div class="topbar-center">
+    <div class="toggle">
+      <button class="tab active" data-view="work">Work</button>
+      <button class="tab" data-view="about">About</button>
+      <button class="tab" data-view="play">Play</button>
+    </div>
+  </div>
+
+  <div class="topbar-right">
+    <div class="time">10:54 PM</div>
+  </div>
 </header>
 
+
 <main>
-  <!-- WORK -->
-  <section id="work" class="section active">
-    <h1>Your Name</h1>
-    <p class="subtitle">Designing through a different lens.</p>
 
-    <div class="card-grid">
-      <div class="card">
-        <span class="tag">UX</span>
-        <img src="assets/work1.png" alt="">
-        <h3>Product Design</h3>
-      </div>
+<!-- WORK -->
+<section id="work" class="view active">
+  <h1>Audrey Abigail</h1>
+  <p class="subtitle">Turning Potential into Mastery.</p>
 
-      <div class="card">
-        <span class="tag">AR</span>
-        <img src="assets/work2.png" alt="">
-        <h3>AR Experience</h3>
-      </div>
-
-      <div class="card">
-        <span class="tag">DJ</span>
-        <h3>Creative Coding</h3>
-      </div>
+  <div class="work-grid">
+    <div class="work-card">
+      <span class="label ar">AR</span>
+      <div class="card-body"></div>
     </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="about-container">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>
-          I’m a designer focused on UX, immersive media, and interaction design.
-          Inspired by technology, fashion, and culture.
-        </p>
-      </div>
-
-      <div class="about-cards">
-        <div class="mini-card">🎵 Music</div>
-        <div class="mini-card">🎨 Creative</div>
-        <div class="mini-card">🌊 Flow</div>
-        <div class="mini-card">🚗 Drives</div>
-      </div>
+    <div class="work-card">
+      <span class="label ux">UX</span>
+      <div class="card-body"></div>
     </div>
-  </section>
 
-  <!-- PLAY -->
-  <section id="play" class="section">
-    <h2>Playground</h2>
-    <p>Experiments, motion, and side projects.</p>
+    <div class="work-card">
+      <span class="label dj">DJ</span>
+      <div class="card-body"></div>
+    </div>
+  </div>
+</section>
 
-    <button class="primary-btn">View Experiments</button>
-  </section>
+<!-- ABOUT -->
+<section id="about" class="view">
+  <div class="about-layout">
+    <div class="about-text">
+      <h3>Today</h3>
+      <p>
+       I’m a lifelong learner turning curiosity into skills. I thrive on mastering new tools and technologies, building projects that solve real problems, and growing with every challenge.
+      </p>
+
+      <h3>Growth</h3>
+      <p>
+       I turn ideas into skills and skills into results, constantly learning and building along the way.
+      </p>
+    </div>
+
+    <div class="about-cards">
+      <div class="mini music">music</div>
+      <div class="mini drives">drives</div>
+      <div class="mini creative">creative</div>
+      <div class="mini flow">flow</div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAY -->
+<section id="play" class="view">
+  <h2>Playground</h2>
+  <p>Experiments & interactions.</p>
+</section>
+
 </main>
 
 <script src="script.js"></script>
