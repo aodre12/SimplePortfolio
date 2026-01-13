@@ -37,3 +37,31 @@ document.addEventListener('mousemove', e => {
   const y = (e.clientY - 200)/40;
   avatar.style.transform = `translate(${x}px, ${y}px)`;
 });
+
+// HERO CHARACTER TILT ANIMATION
+const character = document.getElementById('hero-character');
+
+document.addEventListener('mousemove', (e) => {
+    if (!character) return;
+
+    const rect = character.getBoundingClientRect();
+    const charCenterX = rect.left + rect.width / 2;
+    const charCenterY = rect.top + rect.height / 2;
+
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    const angleX = (charCenterY - mouseY) / 25;
+    const angleY = (mouseX - charCenterX) / 25;
+
+    const limit = 20;
+    const constrainedX = Math.max(Math.min(angleX, limit), -limit);
+    const constrainedY = Math.max(Math.min(angleY, limit), -limit);
+
+    character.style.transform = `rotateX(${constrainedX}deg) rotateY(${constrainedY}deg)`;
+});
+
+// Reset when mouse leaves window
+document.addEventListener('mouseleave', () => {
+    if (character) character.style.transform = `rotateX(0deg) rotateY(0deg)`;
+});

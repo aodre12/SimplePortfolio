@@ -256,3 +256,21 @@ h1 {
   color: #9a9aa0;
   margin-top: 10px;
 }
+
+/* CHARACTER ANIMATION */
+.character-wrapper {
+    width: 300px; /* Adjust based on your image size */
+    height: auto;
+    perspective: 1000px; /* 3D effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 0; /* spacing under hero */
+}
+
+#hero-character {
+    width: 100%;
+    height: auto;
+    transition: transform 0.1s ease-out; /* smooth movement */
+    will-change: transform;
+}
