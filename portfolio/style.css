@@ -164,7 +164,7 @@ body {
 }
 
 .work-card {
-  background: #0f0f12;
+  background: #404049;
   border-radius: 22px;
   padding: 22px;
   height: 220px;
@@ -389,4 +389,45 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+}
+
+.resume-card {
+  width: 140px;              /* smaller rectangle */
+  height: 60px;              /* shorter height */
+  display: flex;
+  flex-direction: row;       /* icon + text side by side */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;                  /* space between icon and text */
+  border-radius: 12px;
+  font-size: 14px;
+  padding: 8px 12px;
+  background: #1a2733;       /* same style as mini cards */
+  transition: 0.3s;
+}
+
+.resume-card i {
+  font-size: 20px;
+  color: #fff;
+}
+
+.resume-card span {
+  color: #fff;
+}
+
+.resume-card:hover {
+  transform: translateY(-4px);
+  background: #1f1f25;
+}
+
+.about-layout {
+  display: flex;
+  flex-direction: column; /* stack Resume → About text → Skills */
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.resume-container {
+  display: flex;
+  justify-content: flex-start; /* align to left */
 }
